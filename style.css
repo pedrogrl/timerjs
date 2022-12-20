@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+:root {
+   font-size: 62.5%;
+
+   --bg-color: #121214;
+
+   --base-color: 194;
+   --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+   --primary-color: hsl(var(--base-color), 100%, 63%);
+
+   --text-color: #fff;
+}
+
+.hidden {
+   display: none;
+}
+
+body {
+   background-color: var(--bg-color);
+   color: var(--text-color);
+
+   font-size: 1.6rem;
+   font-family: 'Roboto', sans-serif;
+
+   display: grid;
+   height: 100vh;
+}
+
+button {
+   background-color: transparent;
+   border: none;
+
+   cursor: pointer;
+}
+
+button svg {
+   width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+
+/* .play svg path{
+   fill: var(--primary-color);
+} */
+
+main {
+   align-self: flex-end;
+   justify-self: center;
+
+   display: grid;
+}
+
+#timer {
+   justify-self: center;
+   font-size: clamp(8.0rem, 4.0rem + 10vw, 8.8rem);
+
+   display: flex;
+   margin-bottom: 1.6rem;
+}
+
+#controls {
+   background-color: var(--bg-primary-light);
+   
+   display: flex;
+   gap: 3.2rem;
+   align-items: center;
+   justify-content: center;
+   justify-self: center;
+
+   width: clamp(10.0rem, 10.0rem + 30vw, 22.8rem);
+   height: clamp(7.0rem, 5.0rem + 10vw, 10.0rem);
+
+   border-radius: 99px;
+}
+
+footer {
+   align-self: flex-end;
+   justify-self: flex-end;
+
+   padding: 0 4.0rem 2.0rem 0;
+}
+
+@media (max-width: 375px) {
+   footer {
+      justify-self: center;
+      padding: 1rem 0;
+   }
+}
