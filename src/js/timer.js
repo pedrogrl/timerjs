@@ -1,3 +1,6 @@
+import Sounds from "./sounds.js";
+const sound = Sounds();
+
 export default function Timer({
    minutesDisplay,
    secondsDisplay,
@@ -32,6 +35,7 @@ export default function Timer({
             resetControls();
             updateDisplay();
             reset();
+            sound.kitchenTimer.play();
             return;
          }
 
